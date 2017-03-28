@@ -4,17 +4,23 @@ import { FormsModule } from '@angular/forms';
 import { HttpModule } from '@angular/http';
 
 import { AppComponent } from './app.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
+
+import { DataService } from './shared/data.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    ParentComponent,
+    ChildComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     HttpModule
   ],
-  providers: [],
+  providers: [ DataService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
